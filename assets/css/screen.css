@@ -1728,6 +1728,7 @@ Usage (In Ghost editor):
     transform: rotate(90deg);
 }
 
+.floating-header-share-wa,
 .floating-header-share-tw,
 .floating-header-share-fb {
     display: block;
@@ -1744,6 +1745,9 @@ Usage (In Ghost editor):
     background: #33b1ff;
 }
 
+.floating-header-share-wa {
+    background: #5cbe4a;
+}
 .floating-header-share-fb {
     background: #005e99;
 }
