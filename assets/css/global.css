@@ -420,6 +420,9 @@ a {
     color: color(var(--magenta) l(-5%));
     text-decoration: none;
 }
+a svg {
+    fill: color(var(--magenta) l(-5%));
+}
 
 a:hover {
     text-decoration: underline;

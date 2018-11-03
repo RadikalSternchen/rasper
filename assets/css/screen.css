@@ -311,6 +311,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     fill: black;
 }
 
+a svg,
 .social-link-fb svg {
     height: 1.5rem;
 }
@@ -1215,7 +1216,9 @@ Usage (In Ghost editor):
     border-color: color(var(--lightgrey) l(-2%));
 }
 
-.subscribe-form button {
+.subscribe-form button,
+.subscribe-overlay a.button,
+.subscribe-form a.button {
     display: inline-block;
     margin: 0 0 0 10px;
     padding: 0 20px;
@@ -1239,6 +1242,8 @@ Usage (In Ghost editor):
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
+.subscribe-form a.button:hover,
+.subscribe-form a.button:active,
 .subscribe-form button:active,
 .subscribe-form button:focus {
     background: color(var(--magenta) lightness(-9%) saturation(-10%));
