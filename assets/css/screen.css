@@ -112,8 +112,8 @@ body {
     position: relative;
     padding-top: 12px;
     padding-bottom: 12px;
-    color: #fff;
-    background: color(var(--darkgrey) l(-5%)) no-repeat center center;
+    color: black;
+    background: var(--yellow) no-repeat center center;
     background-size: cover;
 }
 
@@ -126,7 +126,7 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0,0,0,0.18);
+    /* background: rgba(0,0,0,0.18); */
 }
 
 .site-header:after {
@@ -139,7 +139,7 @@ body {
     z-index: 10;
     display: block;
     height: 80px;
-    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0));
+    /* background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0)); */
 }
 
 .site-header.no-cover:before,
@@ -231,7 +231,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: block;
     margin-right: 24px;
     padding: 11px 0;
-    color: #fff;
+    color: black;
     font-size: 1.7rem;
     line-height: 1em;
     font-weight: bold;
@@ -266,7 +266,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: block;
     margin: 0;
     padding: 10px 12px;
-    color: #fff;
+    color: black;
     opacity: 0.8;
 }
 
@@ -298,7 +298,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     align-items: center;
     margin: 0;
     padding: 10px;
-    color: #fff;
+    color: black;
     opacity: 0.8;
 }
 
@@ -308,7 +308,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .social-link svg {
     height: 1.8rem;
-    fill: #fff;
+    fill: black;
 }
 
 .social-link-fb svg {
@@ -320,7 +320,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .social-link-wb svg path {
-    stroke: #fff;
+    stroke: black;
 }
 
 .social-link-rss svg {
@@ -330,8 +330,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .subscribe-button {
     display: block;
     padding: 4px 10px;
-    border: #fff 1px solid;
-    color: #fff;
+    border: black 1px solid;
+    color: black;
     font-size: 1.2rem;
     line-height: 1em;
     border-radius: 10px;
@@ -354,7 +354,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .rss-button svg {
     margin-bottom: 1px;
     height: 2.1rem;
-    fill: #fff;
+    fill: black;
 }
 
 @media (max-width: 700px) {
@@ -694,7 +694,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-meta-date {
-    color: var(--blue);
+    color: var(--midgrey);
 }
 
 .post-full-title {
@@ -813,14 +813,18 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0;
 }
 
+.post-full-meta a,
 .post-full-content a {
     color: #000;
     word-break: break-word;
-    box-shadow: var(--blue) 0 -1px 0 inset;
+    box-shadow: var(--yellow) 0 -1px 0 inset;
+    transition: 0.25s;
 }
 
+.post-full-meta a:hover,
 .post-full-content a:hover {
-    color: var(--blue);
+    color: var(--magenta);
+    box-shadow: var(--magenta) 0 -1px 0 inset;
     text-decoration: none;
 }
 
@@ -891,7 +895,7 @@ Usage (In Ghost editor):
 .post-full-content blockquote {
     margin: 0 0 1.5em;
     padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
+    border-left: var(--yellow) 3px solid;
 }
 
 .post-full-content blockquote p {
@@ -1024,7 +1028,7 @@ Usage (In Ghost editor):
     margin: 0.5em 0;
     padding: 1em 0 1.5em;
     border: 0;
-    color: var(--blue);
+    color: var(--magenta);
     font-family: Georgia,serif;
     font-size: 3.2rem;
     line-height: 1.35em;
@@ -1067,7 +1071,7 @@ Usage (In Ghost editor):
 }
 
 .footnote-backref {
-    color: var(--blue) !important;
+    color: var(--magenta) !important;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none !important;
@@ -1224,10 +1228,10 @@ Usage (In Ghost editor):
     text-align: center;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
     background: linear-gradient(
-    color(var(--blue) whiteness(+7%)),
-    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color(var(--blue) lightness(-4%) saturation(-10%))
+    color(var(--magenta) whiteness(+7%)),
+    color(var(--magenta) lightness(-7%) saturation(-10%)) 60%,
+    color(var(--magenta) lightness(-7%) saturation(-10%)) 90%,
+    color(var(--magenta) lightness(-4%) saturation(-10%))
     );
     border-radius: 5px;
     box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
@@ -1237,7 +1241,7 @@ Usage (In Ghost editor):
 
 .subscribe-form button:active,
 .subscribe-form button:focus {
-    background: color(var(--blue) lightness(-9%) saturation(-10%));
+    background: color(var(--magenta) lightness(-9%) saturation(-10%));
 }
 
 @media (max-width: 650px) {
@@ -1328,8 +1332,8 @@ Usage (In Ghost editor):
 }
 
 .author-card-button:hover {
-    border-color: var(--blue);
-    color: var(--blue);
+    border-color: var(--magenta);
+    color: var(--magenta);
     text-decoration: none;
 }
 
@@ -1752,7 +1756,7 @@ Usage (In Ghost editor):
     width: 100%;
     height: 2px;
     border: none;
-    color: var(--blue);
+    color: var(--yellow);
     background: transparent;
 
     appearance: none;
@@ -1763,11 +1767,11 @@ Usage (In Ghost editor):
 }
 
 .progress::-webkit-progress-value {
-    background-color: var(--blue);
+    background-color: var(--yellow);
 }
 
 .progress::-moz-progress-bar {
-    background-color: var(--blue);
+    background-color: var(--yellow);
 }
 
 .progress-container {
@@ -1784,7 +1788,7 @@ Usage (In Ghost editor):
     display: block;
     width: 50%;
     height: inherit;
-    background-color: var(--blue);
+    background-color: var(--yellow);
 }
 
 @media (max-width: 900px) {
@@ -2151,10 +2155,10 @@ Usage (In Ghost editor):
     text-align: center;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
     background: linear-gradient(
-    color(var(--blue) whiteness(+7%)),
-    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color(var(--blue) lightness(-4%) saturation(-10%))
+    color(var(--magenta) whiteness(+7%)),
+    color(var(--magenta) lightness(-7%) saturation(-10%)) 60%,
+    color(var(--magenta) lightness(-7%) saturation(-10%)) 90%,
+    color(var(--magenta) lightness(-4%) saturation(-10%))
     );
     border-radius: 8px;
     box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
@@ -2164,7 +2168,7 @@ Usage (In Ghost editor):
 
 .subscribe-overlay button:active,
 .subscribe-overlay button:focus {
-    background: color(var(--blue) lightness(-9%) saturation(-10%));
+    background: color(var(--magenta) lightness(-9%) saturation(-10%));
 }
 
 .subscribe-overlay-close {
@@ -2214,8 +2218,8 @@ Usage (In Ghost editor):
     position: relative;
     padding-top: 20px;
     padding-bottom: 60px;
-    color: #fff;
-    background: color(var(--darkgrey) l(-15%));
+    color: var(--darkgrey);
+    background: var(--magenta);
 }
 
 .site-footer-content {

@@ -1,6 +1,6 @@
 {
-    "name": "casper",
-    "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
+    "name": "rasper",
+    "description": "Adapted the default personal blogging theme for Ghost for radikal.jetzt.",
     "demo": "https://demo.ghost.io",
     "version": "2.7.0",
     "engines": {
@@ -17,9 +17,9 @@
         "test": "gscan ."
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Benjamin Kampmann",
+        "email": "ben@gnunicorn.org",
+        "url": "https://gnunicorn.org"
     },
     "gpm": {
         "type": "theme",
@@ -31,14 +31,15 @@
     "keywords": [
         "ghost",
         "theme",
-        "ghost-theme"
+        "ghost-theme",
+        "radikal"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Casper.git"
+        "url": "https://github.com/gnunicorn/rasper.git"
     },
-    "bugs": "https://github.com/TryGhost/Casper/issues",
-    "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
+    "bugs": "https://github.com/gnunicorn/rasper/issues",
+    "contributors": "https://github.com/gnunicorn/rasper/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "6.3.6",
         "cssnano": "3.7.1",
