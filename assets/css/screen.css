@@ -333,6 +333,7 @@ a svg,
     padding: 4px 10px;
     border: black 1px solid;
     color: black;
+    fill: black;
     font-size: 1.2rem;
     line-height: 1em;
     border-radius: 10px;
@@ -342,6 +343,10 @@ a svg,
 .subscribe-button:hover {
     text-decoration: none;
     opacity: 1;
+}
+
+.subscribe-button svg {
+    fill: black;
 }
 
 .rss-button {
