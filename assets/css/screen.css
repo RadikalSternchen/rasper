@@ -311,6 +311,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     fill: black;
 }
 
+button svg,
 a svg,
 .social-link-fb svg {
     height: 1.5rem;
@@ -1239,29 +1240,18 @@ Usage (In Ghost editor):
     padding: 0 20px;
     height: 41px;
     outline: none;
-    color: #fff;
+    color: var(--magenta);
     font-size: 1.5rem;
     line-height: 37px;
     font-weight: 400;
     text-align: center;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
-    background: linear-gradient(
-    color(var(--magenta) whiteness(+7%)),
-    color(var(--magenta) lightness(-7%) saturation(-10%)) 60%,
-    color(var(--magenta) lightness(-7%) saturation(-10%)) 90%,
-    color(var(--magenta) lightness(-4%) saturation(-10%))
-    );
+    border: 1px solid var(--magenta);
     border-radius: 5px;
-    box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
-
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.subscribe-form a.button:hover,
-.subscribe-form a.button:active,
-.subscribe-form button:active,
-.subscribe-form button:focus {
-    background: color(var(--magenta) lightness(-9%) saturation(-10%));
+.subscribe-overlay a.button:hover {
+    text-decoration: none;
 }
 
 @media (max-width: 650px) {
