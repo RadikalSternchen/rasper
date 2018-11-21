@@ -75,7 +75,7 @@
             </p>
             <a class="button" href="http://t.me/radikalKontaktBot">{{> "icons/telegram"}} Telegram</a>
             <a class="button" id='contact-us-email' href="mailto:kontakt@radikal.jetzt">{{> "icons/envelope"}} E-Mail</a>
-            <a class="button" id='feedback-form'>{{> "icons/list"}} Formular</a>
+            <a class="button" onclick="document.location.hash=''" id='contact-form-button'>{{> "icons/list"}} Formular</a>
         </div>
     </div>
 
@@ -92,7 +92,6 @@
     </script>
     <script>
         var mailto = document.querySelectorAll('a[href^="mailto:"][href*="radikal.jetzt"]');
-        console.log(mailto);
         mailto.forEach(function (link) {
             if (link.id === "contact-us-email") { return }
             link.addEventListener("click", function(evt) {
@@ -110,7 +109,17 @@
     {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
     <script src="{{asset "built/jquery-3.2.1.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "built/jquery.fitvids.js"}}"></script>
-<script id="zammad_form_script" src="https://support.unterbau.tech/assets/form/form.js"></script>
+    <script id="zammad_form_script" src="https://support.unterbau.tech/assets/form/form.js"></script>
+    <script>
+    $(function() {
+        $('#contact-form-button').ZammadForm({
+            messageTitle: 'Kontakt Aufnehmen',
+            messageSubmit: 'Übermitteln',
+            messageThankYou: 'Vielen Dank für Ihre Anfrage (#%s). Wir melden uns schnellst möglich!',
+            modal: true
+        });
+    });
+    </script>
     {{#if pagination.pages}}
     <script>
         // maxPages is a global variable that is needed to determine
