@@ -36,7 +36,15 @@ into the {body} of the default.hbs template --}}
                 <div class="post-content">
                     {{content}}
                 </div>
+                
+                {{#has tag="glossar"}}
+                    <div id="glossar-disclaimer">
+                        <p><strong>Disclaimer</strong>: Dies ist ein Artikel aus unserem <a href="/glossar/">Glossar zum radikal*en Diskurs</a>. Darin erklären wir kurz und knapp wichtige Begriffe des aktuellen Diskurs, eben weil diesen bessere Definitionen zu fehlen scheinen. Aber auch wir sind nicht allwissend und es liegt in der Natur der Sache, dass wir Fehler machen oder sich die Definitionen weiter entwickeln. Wenn Du glaubst, dass sei hier der Fall, <a href="mailto:glossar@radikal.jetzt">kannst du hier mit uns in Kontakt treten</a>.</p>
+                    </div>
+                {{/has}}
             </section>
+
+
 
             {{!-- Email subscribe form at the bottom of the page --}}
 
