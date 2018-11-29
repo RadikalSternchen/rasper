@@ -14,17 +14,12 @@ It's a good idea to keep this template as minimal as possible in terms of both f
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 </head>
 <body class="error-template">
+
     <div class="site-wrapper">
 
-        <header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+        <header class="site-header outer">
             <div class="inner">
-                <nav class="site-nav-center">
-                    {{#if @blog.logo}}
-                        <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-                    {{else}}
-                        <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
-                    {{/if}}
-                </nav>
+                {{> "site-nav"}}
             </div>
         </header>
 
@@ -51,6 +46,23 @@ It's a good idea to keep this template as minimal as possible in terms of both f
         </aside>
         {{/get}}
 
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                
+                <nav class="second-nav">
+                    {{#if @blog.navigation}}
+                        {{navigation}}
+                    {{/if}}
+                </nav>
+                <nav class="site-footer-nav">
+                    <a href="/glossar/">Glossar</a>
+                    <a href="/verhaltenskodex/">Verhaltenskodex</a>
+                    <a href="/datenschutz/">Datenschutz</a>
+                    <a href="/impressum/">Impressum</a>
+                </nav>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

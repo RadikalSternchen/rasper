@@ -17,17 +17,12 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
 <body class="error-template">
     <div class="site-wrapper">
 
-        <header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+        <header class="site-header outer">
             <div class="inner">
-                <nav class="site-nav-center">
-                    {{#if @blog.logo}}
-                        <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-                    {{else}}
-                        <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
-                    {{/if}}
-                </nav>
+                {{> "site-nav"}}
             </div>
         </header>
+
 
         <main id="site-main" class="site-main outer">
             <div class="inner">
@@ -58,6 +53,25 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
 
             </div>
         </main>
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                
+                <nav class="second-nav">
+                    {{#if @blog.navigation}}
+                        {{navigation}}
+                    {{/if}}
+                </nav>
+                <nav class="site-footer-nav">
+                    <a href="/glossar/">Glossar</a>
+                    <a href="/verhaltenskodex/">Verhaltenskodex</a>
+                    <a href="/datenschutz/">Datenschutz</a>
+                    <a href="/impressum/">Impressum</a>
+                </nav>
+            </div>
+        </footer>
+
     </div>
 </body>
 </html>
