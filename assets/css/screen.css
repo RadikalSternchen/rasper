@@ -1506,8 +1506,8 @@ Usage (In Ghost editor):
     overflow: hidden;
     margin: 0 20px 40px;
     padding: 25px;
-    color: #fff;
-    background: var(--darkgrey) center center;
+    color: var(--darkgrey);
+    background: var(--yellow) center center;
     background-size: cover;
     border-radius: 5px;
     box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
@@ -1521,7 +1521,7 @@ Usage (In Ghost editor):
     bottom: 0;
     left: 0;
     display: block;
-    background: linear-gradient(135deg, rgba(0,40,60,0.8) 0%,rgba(0,20,40,0.7) 100%);
+    background: linear-gradient(135deg, rgba(245,206,40,.85) 0%,rgba(245,206,40,1) 100%);
     border-radius: 5px;
 
     backdrop-filter: blur(2px);
@@ -1544,14 +1544,14 @@ Usage (In Ghost editor):
 .read-next-card-header-title {
     margin: 0;
     padding: 0 20px;
-    color: #fff;
+    color: var(--darkgrey);
     font-size: 3rem;
     line-height: 1.2em;
     letter-spacing: 1px;
 }
 
 .read-next-card-header-title a {
-    color: #fff;
+    color: var(--darkgrey);
     font-weight: 300;
     text-decoration: none;
 }
@@ -1570,7 +1570,7 @@ Usage (In Ghost editor):
 .read-next-divider svg {
     width: 40px;
     fill: transparent;
-    stroke: #fff;
+    stroke: var(--darkgrey);
 
     stroke-width: 0.5px;
     stroke-opacity: 0.65;
@@ -1605,9 +1605,9 @@ Usage (In Ghost editor):
 .read-next-card-content li a {
     display: block;
     padding: 20px 0;
-    border-bottom: rgba(255,255,255,0.3) 1px solid;
-    color: #fff;
-    font-weight: 500;
+    border-bottom: rgba(0,0,0,0.3) 1px solid;
+    color: var(--darkgrey);
+    font-weight: 400;
     vertical-align: top;
     transition: opacity 0.3s ease;
 }
@@ -1627,7 +1627,7 @@ Usage (In Ghost editor):
 }
 
 .read-next-card-footer a {
-    color: #fff;
+    color: var(--darkgrey);
 }
 
 
