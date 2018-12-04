@@ -562,6 +562,16 @@ a svg,
     transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.7s;
 }
 
+.teamlist-avatar {
+    display: block;
+    overflow: hidden;
+    margin: 0 10px;
+    width: 128px;
+    height: 128px;
+    border: #fff 2px solid;
+    border-radius: 100%;
+}
+
 @media (min-width: 800px) {
     .author-list:hover .moving-avatar {
         margin: 0;
@@ -1392,6 +1402,10 @@ Usage (In Ghost editor):
     margin-right: 15px;
 }
 
+.author-list-item {
+    text-align: center;
+}
+
 .author-list-item .author-card {
     position: absolute;
     bottom: 130%;
@@ -1409,6 +1423,7 @@ Usage (In Ghost editor):
     transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(0.98) translateY(15px);
     pointer-events: none;
+    text-align: left;
 }
 
 .author-list-item .author-card:before {
