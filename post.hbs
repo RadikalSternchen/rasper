@@ -36,7 +36,7 @@ into the {body} of the default.hbs template --}}
                 <div class="post-content">
                     {{content}}
                 </div>
-                
+
                 {{#has tag="glossar"}}
                     <div id="glossar-disclaimer">
                         <p><strong>Disclaimer</strong>: Dies ist ein Artikel aus unserem <a href="/glossar/">Glossar zum radikal*en Diskurs</a>. Darin erklären wir kurz und knapp wichtige Begriffe des aktuellen Diskurs, eben weil diesen bessere Definitionen zu fehlen scheinen. Aber auch wir sind nicht allwissend und es liegt in der Natur der Sache, dass wir Fehler machen oder sich die Definitionen weiter entwickeln. Wenn Du glaubst, dass sei hier der Fall, <a href="mailto:glossar@radikal.jetzt">kannst du hier mit uns in Kontakt treten</a>.</p>
@@ -114,7 +114,7 @@ into the {body} of the default.hbs template --}}
                         </ul>
                     </div>
                     <footer class="read-next-card-footer">
-                        <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}} →</a>
+                        <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty=(t 'No posts') singular=(t '% post') plural=(t 'See all % posts')}} →</a>
                     </footer>
                 </article>
                 {{/if}}
