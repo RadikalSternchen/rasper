@@ -13,11 +13,21 @@ into the {body} of the default.hbs template --}}
                     {{@blog.title}}
                 {{/if}}
             </h1>
-            <h2 class="site-description">{{@blog.description}}</h2>
+            <h2 id="site-description" class="site-description">{{@blog.description}}</h2>
         </div>
         {{> "site-nav"}}
     </div>
 </header>
+
+<script>
+    var descs = [
+        "Männer überwinden",
+        "Deutschland überwinden",
+        "Strukturen sprengen"
+    ];
+    document.getElementById('site-description')
+        .innerText = descs[Math.floor(Math.random() * descs.length)];
+</script>
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
