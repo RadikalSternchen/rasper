@@ -123,6 +123,12 @@
             modal: true
         });
     });
+    $(function(){
+        $(".embed-wrapper button").click(
+            function(e) {
+                $(e.target).parent().html($(e.target).data('replace'));
+        });
+    });
     </script>
     {{#if pagination.pages}}
     <script>

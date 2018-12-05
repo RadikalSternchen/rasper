@@ -620,6 +620,27 @@ a svg,
     text-transform: uppercase;
 }
 
+.embed-wrapper {
+    background: #333;
+    color: white;
+    text-align: center;
+    margin: 1.5em 0;
+  }
+  .embed-wrapper p {
+      padding: 2em;
+  }
+  .embed-wrapper a,
+  .embed-wrapper a:visited {
+      color: var(--yellow);
+  }
+  
+  .embed-wrapper button {
+    background: transparent;
+    border: 1px solid white;
+    padding: 0.5em 2em;
+    margin-bottom: 2em;
+  }
+
 /* Special Styling for home page grid (below):
 
 The first (most recent) post in the list is styled to be bigger than the others and take over the full width of the grid to give it more emphasis. Wrapped in a media query to make sure this only happens on large viewports / desktop-ish devices.
