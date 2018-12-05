@@ -94,6 +94,14 @@
         })
     </script>
     <script>
+        var extLinks = document.querySelectorAll("a[href^=http]:not([href^='https://radikal.jetzt'])");
+        for (var i=extLinks.length; i; i--) {
+            var elem = extLinks[i-1];
+            elem.setAttribute("target", "_blank");
+            elem.setAttribute("rel", "noopen noreferrer");
+        }
+    </script>
+    <script>
         var mailto = document.querySelectorAll('a[href^="mailto:"][href*="radikal.jetzt"]');
         mailto.forEach(function (link) {
             if (link.id === "contact-us-email") { return }
