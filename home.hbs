@@ -1,0 +1,60 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                {{#if @blog.logo}}
+                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+                {{else}}
+                    {{@blog.title}}
+                {{/if}}
+            </h1>
+            <h2 id="site-description" class="site-description">{{@blog.description}}</h2>
+        </div>
+        {{> "site-nav"}}
+    </div>
+</header>
+
+<script>
+    var descs = [
+        "Männer überwinden",
+        "Deutschland überwinden",
+        "Strukturen sprengen"
+    ];
+    document.getElementById('site-description')
+        .innerText = descs[Math.floor(Math.random() * descs.length)];
+</script>
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{#if featured}}
+
+                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                    {{> "post-card"}}
+                {{/if}}
+
+            {{/foreach}}
+        </div>
+    </div>
+    <aside class="read-next outer">
+        <div class="inner">
+            <hr/>
+            <h3>Aktionen</h3>
+            <div class="read-next-feed">
+                {{#get "posts" include="tags,authors" filter="tags:aktionista" limit="3" as |aktionen|}}
+                    {{#foreach aktionen}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                {{/get}}
+            </div>
+        </div>
+    </aside>
+</main>
