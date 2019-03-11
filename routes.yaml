@@ -1,0 +1,14 @@
+routes:
+
+ /fund/: fund
+ /fund/event-grants/: fund-events-grants  
+
+collections:
+  /:
+    permalink: /{slug}/
+    template:
+      - index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
