@@ -54,18 +54,26 @@
     <div id="subscribe" class="subscribe-overlay">
         <a class="subscribe-overlay-close" href="#"></a>
         <div class="subscribe-overlay-content">
-            <h1 class="subscribe-overlay-title">{{@blog.title}}sier dich!</h1>
-            <p class="subscribe-overlay-description">
-                Immer auf dem Laufenden bleiben mit unserem Telegram
-                <a  href="https://telegram.org/faq/de#f-was-ist-telegram-was-kann-man-hier-machen" title="Was ist Telegram?" target="noopen">{{> "icons/question"}}</a>
-                Kanal!
-            </p>
-
-            <a class="button" href="https://t.me/radikalSternchen">{{> "icons/telegram"}} Jetzt beitreten</a>
-            {{#if @labs.subscribers}}
-                <hr />
-                {{subscribe_form placeholder="Oder lieber E-Mail Updates?"}}
-            {{/if}}
+            <div class="subscribe-form">
+                <h1 class="subscribe-form-title">{{@blog.title}}isier dich!</h1>
+                <p>
+                    Immer auf dem Laufenden bleiben mit unserem E-Mail-Newsletter
+                </p>
+                <form method="GET" action="https://lists.radikal.jetzt/subscription/iByh6gtnb">
+                    
+                    <input type="hidden" name="custom_radikal_monthly_die_monatliche_zusammenfassung_uraj74gp" value="1" />
+                    <input class="subscribe-email" type="email" placeholder="E-Mail" name="email" />
+                    <button type="submit"> Eintragen</button>
+                </form>
+                <p style="font-size: 1em; margin-top: 4em">
+                    Und folge uns auf:
+                </p>
+                <p style="font-size: 2em; line-height: 3em;">
+                    <a href="https://twitter.com/radikalSternchn" title="twitter">{{> "icons/twitter"}}</a>
+                    <a href="https://www.instagram.com/radikal.sternchen/" title="instagram">{{> "icons/instagram"}}</a>
+                    <a href="https://t.me/radikalSternchen" title="telegram">{{> "icons/telegram"}}</a>
+                </p>
+            </div>
         </div>
     </div>
 

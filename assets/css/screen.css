@@ -1281,6 +1281,10 @@ Usage (In Ghost editor):
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
+.subscribe-form a svg {
+    height: 3rem;
+}
+
 .subscribe-overlay a.button:hover {
     text-decoration: none;
 }
