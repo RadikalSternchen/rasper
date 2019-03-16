@@ -34,7 +34,7 @@ into the {body} of the default.hbs template --}}
     <div class="inner">
 
         <div class="post-feed">
-            {{#get "posts" filter="featured:true" limit=6}}
+            {{#get "posts" limit=@config.posts_per_page}}
               {{#foreach posts}}
 
                     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
@@ -43,6 +43,7 @@ into the {body} of the default.hbs template --}}
 
             {{/get}}
         </div>
+        <h3 style="text-align: right"><a href="/page/2">weitere Beiträge</a></h3>
     </div>
     <aside class="read-next outer">
         <div class="inner">
@@ -57,20 +58,4 @@ into the {body} of the default.hbs template --}}
             </div>
         </div>
     </aside>
-    <div class="inner">
-        <hr/>
-        <h3>Neueste Beiträge</h3>
-        <div class="js-post-feed-next read-next-feed">
-        {{#get "posts" limit=@config.posts_per_page}}
-            {{#foreach posts}}
-                {{#unless featured}}
-
-                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                    {{> "post-card"}}
-                {{/unless}}
-            {{/foreach}}
-
-        {{/get}}
-        </div>
-    </div>
 </main>

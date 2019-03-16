@@ -16,6 +16,7 @@
     --pink: #fa3a57;
     --brown: #a3821a;
     --magenta: #f81b84;
+    --anti-magenta: #000066;  /* high contrast on magenta */
 }
 
 /* Reset

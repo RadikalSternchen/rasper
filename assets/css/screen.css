@@ -88,6 +88,19 @@ body {
 
 */
 
+
+
+.pagination {
+    text-align: center;
+    margin: 0.5em 0 2.5em;
+    color: var(--darkgrey);
+}
+
+.pagination a {
+    padding: 3em;
+}
+
+  
 /* 3. Special Template Styles
 /* ---------------------------------------------------------- */
 
@@ -2290,17 +2303,21 @@ Usage (In Ghost editor):
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    color: rgba(255,255,255,0.7);
+    color: var(--anti-magenta);
     font-size: 1.3rem;
 }
 
 .site-footer-content a {
-    color: rgba(255,255,255,0.7);
+    color: var(--anti-magenta);
+    border-bottom: dotted 1px var(--anti-magenta);
+    text-decoration: none;
+    line-height: 1em;
 }
 
 .site-footer-content a:hover {
-    color: rgba(255,255,255,1);
+    color: white;
     text-decoration: none;
+    border-bottom: dotted 1px white;
 }
 
 .site-footer-nav {
@@ -2315,7 +2332,7 @@ Usage (In Ghost editor):
 .site-footer-nav a:before {
     content: "";
     position: absolute;
-    top: 11px;
+    top: 5px;
     left: -11px;
     display: block;
     width: 2px;

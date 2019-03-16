@@ -41,6 +41,7 @@
                 </nav>
                 <nav class="site-footer-nav">
                     <a href="/glossar/">Glossar</a>
+                    <a href="/fund/">Fund</a>
                     <a href="/verhaltenskodex/">Verhaltenskodex</a>
                     <a href="/datenschutz/">Datenschutz</a>
                     <a href="/impressum/">Impressum</a>
@@ -145,15 +146,6 @@
         });
     });
     </script>
-    {{#if pagination.pages}}
-    <script>
-        // maxPages is a global variable that is needed to determine
-        // if we need to load more pages for the infinitescroll, or if
-        // we reached the last page already.
-        var maxPages = parseInt('{{pagination.pages}}');
-    </script>
-    <script src="{{asset "built/infinitescroll.js"}}"></script>
-    {{/if}}
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
