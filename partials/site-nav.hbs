@@ -1,17 +1,22 @@
 <nav class="site-nav">
-    <div class="site-nav-left">
-        {{^is "home"}}
-            {{#if @blog.logo}}
-                <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+    <div class="site-nav-left-wrapper">
+        <div class="site-nav-left">
+            {{#if @site.logo}}
+                <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
             {{else}}
-                <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
+                <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
             {{/if}}
-        {{/is}}
-        {{#if @blog.navigation}}
-            {{navigation}}
-        {{/if}}
+            <div class="site-nav-content">
+                {{#if @site.navigation}}
+                    {{navigation}}
+                {{/if}}
+            </div>
+        </div>
     </div>
     <div class="site-nav-right">
+        {{#if @site.secondary_navigation}}
+            {{navigation type="secondary"}}
+        {{/if}}
         <div class="social-links">
             <a href="/uber/" class="social-link">Über</a>
             {{#if @blog.facebook}}
@@ -26,8 +31,12 @@
             {{#if @labs.subscribers}}
                 <a class="subscribe-button" href="#subscribe">Subscribe</a>
             {{else}}
-                <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+                <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
             {{/if}}
         {{/comment}}
     </div>
 </nav>
+
+{{#is "post"}}
+    {{> floating-header}}
+{{/is}}

@@ -1,11 +1,12 @@
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="{{@blog.url}}">
-            <span>{{@blog.title}}</span>
+        <a href="{{@site.url}}">
+            <span>{{@site.title}}</span>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">{{title}}</div>
+    <div class="floating-header-title">{{post.title}}</div>
+ 
     <div class="floating-header-share">
         <div class="floating-header-share-label">Teil es {{> "icons/point"}}</div>
         <a class="floating-header-share-tw" href="https://t.me/share/url?url={{url absolute="true"}}&text={{encode title}}"
@@ -24,9 +25,4 @@
             {{> "icons/facebook"}}
         </a>
     </div>
-    <progress id="reading-progress" class="progress" value="0">
-        <div class="progress-container">
-            <span class="progress-bar"></span>
-        </div>
-    </progress>
 </div>
