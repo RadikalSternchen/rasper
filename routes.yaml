@@ -1,7 +1,8 @@
 routes:
 
  /fund/: fund
- /fund/event-grants/: fund-events-grants  
+ /fund/event-grants/: fund-events-grants 
+ /fund/aktivisti-grants/: fund-aktivisti-grants  
 
 collections:
   /:
