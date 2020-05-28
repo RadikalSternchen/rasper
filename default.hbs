@@ -32,7 +32,10 @@
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+                <section class="copyright">
+                    <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
+                    <a style="font-size: 0.8em;margin-left: 1em" href="/ghost/">Admin</a>
+                </section>
                 
                 <nav class="second-nav">
                     {{#if @site.navigation}}
