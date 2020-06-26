@@ -2630,13 +2630,14 @@ Usage (In Ghost editor):
     margin: -2.25em 0 3em;
 }
 
-#glossar-disclaimer {
+.tag-disclaimer {
     padding: 1em;
     font-size: 0.81em;
     line-height: 1.8em;
     background: aliceblue;
     margin-bottom: 3em;
 }
+
 /* keep existing <pre> styles for code cards with captions */
 .kg-code-card {
     width: 100%;
